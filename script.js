@@ -7,7 +7,7 @@ const products = [
     material: 'Papier-mâché, natural pigments, matte finish',
     size: '14 x 10 in',
     image: 'assets/ganesha-mask.png',
-    line: 'An auspicious form for thresholds and sacred corners.',
+    line: 'An auspicious form for thresholds and quiet cultural corners.',
     badge: 'Best Seller'
   },
   {
@@ -50,7 +50,7 @@ const testimonials = [
     name: 'Ananya Rao',
     city: 'Bengaluru',
     role: 'Interior Designer',
-    quote: 'Maskriti pieces have the rare balance of cultural depth and modern restraint. They work beautifully in premium homes.'
+    quote: 'Maskriti pieces have the rare balance of cultural depth and modern restraint. They work beautifully in considered interiors.'
   },
   {
     name: 'Rohit Sen',
@@ -62,7 +62,7 @@ const testimonials = [
     name: 'Meera Kapoor',
     city: 'Mumbai',
     role: 'Gift Buyer',
-    quote: 'It felt far more meaningful than a standard decor gift. The story behind the piece made it memorable.'
+    quote: 'It felt far more meaningful than a standard collectible gift. The story behind the piece made it memorable.'
   }
 ];
 
@@ -77,7 +77,7 @@ const byId = id => products.find(product => product.id === id);
 const productAlt = {
   ganesha: 'Handcrafted Ganesha Mukha mask with ornate crown detailing',
   chhau: 'Traditional Chhau face mask inspired by Indian performance craft',
-  guardian: 'Vermilion guardian mask for cultural wall decor',
+  guardian: 'Vermilion guardian collectible mask form with matte painted surface',
   custom: 'Custom mythological mask handcrafted for collectors'
 };
 

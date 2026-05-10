@@ -3,6 +3,14 @@ DirectoryIndex index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  RewriteRule ^our-menu/?$ / [L,R=301]
+  RewriteRule ^product/pizza-meat-feast/?$ / [L,R=301]
+  RewriteRule ^product-tag/pizza/?$ / [L,R=301]
+  RewriteRule ^projects/shelf-of-arts/?$ /archive/ [L,R=301]
+  RewriteRule ^blog/?$ /archive/ [L,R=301]
+  RewriteRule ^hello-world/?$ /archive/ [L,R=301]
+  RewriteRule ^a-place-of-silence/?$ /archive/ [L,R=301]
+
   RewriteCond %{HTTPS} !=on
   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
