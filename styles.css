@@ -151,6 +151,20 @@ p { color: var(--muted); }
   box-shadow: inset 0 1px rgba(255, 255, 255, .8);
 }
 .cart-trigger:hover { border-color: rgba(166, 30, 34, .42); color: var(--primary); }
+.nav-shell a.cart-trigger {
+  min-height: 36px;
+  padding: 0 12px;
+  justify-content: center;
+  border-color: rgba(36, 23, 19, .12);
+  border-radius: 6px;
+  background: rgba(255, 248, 234, .52);
+  box-shadow: none;
+  line-height: 1;
+}
+.nav-shell a.cart-trigger:hover {
+  border-color: rgba(166, 30, 34, .3);
+  background: var(--surface);
+}
 .cart-icon {
   width: 17px;
   height: 17px;
@@ -1457,6 +1471,182 @@ dd { margin: 0; font-size: .95rem; color: var(--text); }
   .shop-category-chips a { flex: 1 1 auto; text-align: center; }
 }
 
+/* Standalone craft page */
+.craft-page { padding-top: 7.5rem; }
+.craft-page-intro { padding-top: 4rem; }
+.craft-page-intro h1 { font-size: clamp(3.4rem, 5.4vw, 6rem); }
+.craft-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.craft-process-stage {
+  padding: 1.5rem;
+  border: 1px solid rgba(248, 239, 217, .24);
+  background: rgba(255, 248, 234, .08);
+  box-shadow: 0 18px 34px rgba(36, 23, 19, .14);
+}
+.craft-process-stage b {
+  color: var(--gold);
+  font-size: .74rem;
+  letter-spacing: .12em;
+}
+.craft-process-stage h3 {
+  margin-top: 1rem;
+  color: var(--bg);
+}
+.craft-process-stage p {
+  margin-bottom: 0;
+  color: rgba(248, 239, 217, .82);
+}
+
+@media (max-width: 980px) {
+  .craft-process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Standalone Chhau authority page */
+.chhau-page .chhau-intro h1 {
+  max-width: 700px;
+  font-size: clamp(3.1rem, 4.7vw, 5.4rem);
+}
+.chhau-page .story-copy > p,
+.chhau-page .chhau-reading p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+.chhau-page .chhau-hero-image img {
+  aspect-ratio: .9;
+  object-fit: contain;
+  background: radial-gradient(circle, rgba(197, 154, 74, .16), transparent 64%);
+}
+.chhau-page .source-note {
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: .84rem;
+}
+.chhau-page .source-note a {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+.chhau-page .respect-note {
+  margin-top: 1.5rem;
+  padding: 1.35rem;
+  border-left: 3px solid var(--primary);
+  background: rgba(255, 248, 234, .72);
+  box-shadow: var(--soft-shadow);
+}
+.chhau-page .respect-note strong {
+  color: var(--primary);
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.chhau-page .respect-note p { margin-bottom: 0; }
+.chhau-comparison-section { background: var(--surface); }
+.chhau-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.chhau-comparison article {
+  padding: clamp(1.6rem, 3vw, 2.5rem);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 248, 234, .96), rgba(248, 239, 217, .78));
+  box-shadow: var(--card-shadow);
+}
+.chhau-comparison article:last-child { border-top: 3px solid var(--primary); }
+.chhau-comparison span,
+.chhau-use-grid span {
+  color: var(--primary);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.chhau-comparison h3 { margin-top: .8rem; font-size: clamp(1.65rem, 2.4vw, 2.2rem); }
+.chhau-comparison ul {
+  display: grid;
+  gap: .7rem;
+  margin: 1.25rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+.chhau-principles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.chhau-principles article {
+  min-height: 150px;
+  padding: 1.5rem;
+  border: 1px solid rgba(248, 239, 217, .24);
+  background: rgba(255, 248, 234, .08);
+  box-shadow: 0 18px 34px rgba(36, 23, 19, .14);
+}
+.chhau-principles b { color: var(--gold); font-size: .72rem; letter-spacing: .12em; }
+.chhau-principles h3 { margin-top: 1rem; color: var(--bg); }
+.chhau-use-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.chhau-use-grid article {
+  min-height: 145px;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 248, 234, .72);
+  box-shadow: 0 12px 28px rgba(36, 23, 19, .07);
+}
+.chhau-use-grid h3 { margin-top: 1rem; }
+.chhau-page .chhau-products { background: var(--surface); }
+.chhau-page .chhau-products .product-actions { grid-template-columns: 1fr; }
+.chhau-page .chhau-faq details,
+.chhau-page .chhau-faq summary,
+.chhau-page .chhau-faq details p {
+  letter-spacing: normal;
+  word-spacing: normal;
+  font-kerning: normal;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.chhau-sources { padding-top: 5rem; }
+.source-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 900px;
+}
+.source-links a {
+  display: grid;
+  gap: .45rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 248, 234, .72);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.source-links a:hover { transform: translateY(-2px); border-color: rgba(166, 30, 34, .36); }
+.source-links strong { color: var(--primary); }
+.source-links span { color: var(--muted); font-size: .9rem; }
+
+@media (max-width: 980px) {
+  .chhau-use-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .chhau-page .chhau-intro h1 { font-size: clamp(2.55rem, 11vw, 3.8rem); }
+  .chhau-comparison,
+  .chhau-principles,
+  .chhau-use-grid,
+  .source-links { grid-template-columns: 1fr; }
+  .chhau-principles article,
+  .chhau-use-grid article { min-height: 0; }
+}
+
 /* Standalone story page */
 .story-page { padding-top: 7.5rem; }
 .story-hero { padding-top: 4rem; }
@@ -1550,6 +1740,10 @@ dd { margin: 0; font-size: .95rem; color: var(--text); }
   .contact-page-intro { padding-top: 3rem; }
   .contact-page-copy h1 { font-size: clamp(2.8rem, 12vw, 4rem); }
   .contact-guidance-grid { grid-template-columns: 1fr; }
+  .craft-page { padding-top: 6rem; }
+  .craft-page-intro { padding-top: 3rem; }
+  .craft-page-intro h1 { font-size: clamp(2.8rem, 12vw, 4rem); }
+  .craft-process-grid { grid-template-columns: 1fr; }
 }
 
 /* Static product detail pages */
