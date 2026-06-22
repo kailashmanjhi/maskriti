@@ -7,6 +7,7 @@ const products = [
     material: 'Papier-mâché, natural pigments, matte finish',
     size: '14 x 10 in',
     image: 'assets/ganesha-mask.png',
+    url: '/products/ganesha-mukha-mask/',
     line: 'An auspicious form for thresholds and quiet cultural corners.',
     badge: 'Best Seller'
   },
@@ -18,6 +19,7 @@ const products = [
     material: 'Papier-mâché, clay grain texture, hand-painted',
     size: '16 x 12 in',
     image: 'assets/chhau-mask.png',
+    url: '/products/traditional-chhau-face-mask/',
     line: 'Inspired by expressive Chhau performance traditions.',
     badge: ''
   },
@@ -29,6 +31,7 @@ const products = [
     material: 'Papier-mâché, layered paint, archival matte coating',
     size: '18 x 13 in',
     image: 'assets/wall-decor-mask.png',
+    url: '/products/vermilion-guardian-mask/',
     line: 'A bold wall presence with protective visual energy.',
     badge: ''
   },
@@ -40,6 +43,7 @@ const products = [
     material: 'Custom handmade construction',
     size: 'Made to order',
     image: 'assets/collector-mask.png',
+    url: '/products/custom-mythic-mask/',
     line: 'Made around a chosen deity, story, mood, or space.',
     badge: 'Made to Order'
   }
@@ -111,12 +115,12 @@ function renderProducts() {
   const grid = document.querySelector('[data-product-grid]');
   grid.innerHTML = products.map(product => `
     <article class="product-card product-${product.id}">
-      <div class="product-image product-image-wrap">
+      <a class="product-image product-image-wrap" href="${product.url}" aria-label="View ${product.name}">
         ${product.badge ? `<span class="product-badge">${product.badge}</span>` : ''}
         <img src="${product.image}" alt="${productAlt[product.id] || product.name}" loading="lazy" decoding="async" width="900" height="900">
-      </div>
+      </a>
       <div class="product-body product-content">
-        <h3 class="product-title">${product.name}</h3>
+        <h3 class="product-title"><a href="${product.url}">${product.name}</a></h3>
         <p class="product-desc">${product.line}</p>
         <div class="product-meta" aria-label="${product.name} details">
           <span>${product.material}</span>
@@ -125,7 +129,7 @@ function renderProducts() {
         <strong class="product-price">${product.priceText}</strong>
         <div class="product-actions">
           <button class="btn small primary btn-primary" type="button" data-add="${product.id}">Add to Cart</button>
-          <button class="btn small quiet btn-secondary" type="button" data-details="${product.id}">View Details</button>
+          <a class="btn small quiet btn-secondary" href="${product.url}">View Details</a>
         </div>
       </div>
     </article>
