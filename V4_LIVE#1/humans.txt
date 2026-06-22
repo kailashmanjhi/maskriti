@@ -1,6 +1,0 @@
-Maskriti
-Premium handcrafted masks rooted in myth, craft, and tradition.
-Site: https://www.maskriti.com/
-
-Design & Development: Maskriti Team
-Technology: Static HTML, CSS, JavaScript
